@@ -1,0 +1,19 @@
+#Ignore the logs directory
+logs/
+
+Documentacao.pdf
+
+Pipfile
+Pipfile.lock.json
+
+venv/
+core/_pycache_/
+people/_pycache_/
+
+#Ignoring git and cache folders
+.git
+.cache
+
+#Ignoring all the markdown and class files
+*.md
+**/*.class

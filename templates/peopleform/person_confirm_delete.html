@@ -1,0 +1,30 @@
+<!--author : Janilson Serra
+    email : j.janilson12@gmail.com-->
+
+<!--html para exibir a tela de confirmação da exclusão-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confimar Exclusão do Cadastro</title>
+    {% load static %}
+    <link rel="stylesheet" href={% static "delete.css" %}> <!--Obtem o css para esse formulário-->
+
+</head>
+<body>
+    <!--a variável object é fornecida pela classe DeleteView e fornecerá os dados do cadastro da pessoas que será excuída.-->
+    <div>
+        Tem certeza que deseja excluir o cadastro de <strong>{{ object.full_name }}</strong>?
+        <br>
+
+        <form action="." method="post">
+            {% csrf_token %}
+            <input type="submit" value="Sim, desejo excluir">
+            <input type="reset" value="Cancelar" onclick="location.href = '{% url 'peopleform:list' %}'">
+        </form> 
+    </div>
+    
+</body>
+</html>

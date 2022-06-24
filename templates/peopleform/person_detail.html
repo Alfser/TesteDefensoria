@@ -1,0 +1,47 @@
+<!--author : Janilson Serra
+    email : j.janilson12@gmail.com-->
+
+<!--html para exibir a tela de visualização de um cadastro-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Cadastro</title>
+    {% load static %}
+    <link rel="stylesheet" href={% static "details.css" %}> <!--Obtem o css para esse formulário-->
+
+</head>
+<body>
+
+    <!--botão para voltar a lista-->
+    <header>
+        <h1>Cadastro</h1>
+    </header>
+
+    <section>
+        <!--A variável object é fornecida pela classe DetailView e tem os dados fornecidos pela classe modelo-->
+        <div>
+            Nome Completo : {{ object.full_name }}
+        </div>
+        <div>
+            Nome da Mãe : {{ object.mother_name }}
+        </div>
+
+        <div>
+            CPF : {{ object.cpf }}
+        </div>
+        <div>
+            Endereço : {{ object.adress }}    
+        </div>
+        
+        <div>
+            Telefone : {{object.phone}}
+        </div>
+        <br>
+        <br>
+        <input type="submit" value="Voltar para a lista" onclick="location.href = '{% url 'peopleform:list' %}'">
+    </section>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body{
+    background: rgb(60, 60, 177);
+    font: normal 15pt Arial;     
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 700px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto;
+    box-shadow: 4px 4px 10px rgb(20, 20, 20);
+}
+
+.button-bt{
+    background-color:white;
+    padding: 15px;
+    width: 42%; 
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    border: 3px solid black;
+    margin: 20px;
+    box-shadow: 1px 1px 3px rgb(20, 20, 20);
+}

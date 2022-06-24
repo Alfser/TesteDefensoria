@@ -1,0 +1,41 @@
+<!--author : Janilson Serra
+    email : j.janilson12@gmail.com-->
+
+<!--html para exibir a tela inicial-->
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Defensoria Pública</title>
+    {% load static %}
+    <link href="{% static 'home.css' %}" rel="stylesheet"> <!--Obtem o css para esse formulário-->
+</head>
+<body>
+    <header>
+        <h1>Teste Defensoria Publica</h1>
+    </header>
+    
+    <section>
+        <p>O teste foi desenvolvido usando a abordagem <strong>Based Class View</strong> do Django.
+            Esta nos fonece algumas ferramentas que facilitam o uso dos atributos dos models e a criação de formulários no html.</p> 
+        <p>E para dar uma boa aparência ao formulário de criação e edição de cadastro, foi usado o <strong>bootstrao 4</strong> junto com a bibliotéca <strong>django-crispy-forms</strong> do Python.</p>
+        Sobre as funcionalidades da aplicação:
+        <br>
+        <li>Possui a função de listagem das pessoas cadastradas.</li> 
+        <li>Possui a função de cadastro.</li> 
+        <li>Possui a função de edição do cadastro.</li> 
+        <li>Possui a função de deleção de cadastro.</li> 
+        <li>Possui a função de visualização do cadastro.</li> 
+        <br>
+        <input type="submit" value="Ver os Cadastros." onclick="location.href = '{% url 'peopleform:list' %}'">
+    </section>
+
+    <footer>
+        <p>&copy; Janilson Serra</p>
+    </footer>
+</body>
+</html>

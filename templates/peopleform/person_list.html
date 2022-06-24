@@ -1,0 +1,38 @@
+<!--author : Janilson Serra
+    email : j.janilson12@gmail.com-->
+
+    <!--html para exibir a tela de listagem dos cadastros-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pessoas cadastradas</title>
+    {% load static %}
+    <link rel="stylesheet" href={% static "list.css" %}> <!--Obtem o css para esse formulário-->
+</head>
+<body>
+    <header>
+        <h1>Lista de Pessoas Cadastradas</h1>
+    </header>
+<section>
+    <div>
+
+        {% for person in object_list %} <!--object_list é a lista que a classe PersonList nos fornece por padrão-->
+        <!--Exibir o nome completo de cada cliente numa lista-->
+        <!--Adicionar um link que redirecionará para atualização da pessoas selecionada na lista.-->
+        <!--Adicionar um link que redirecionará para visualização dos dados da pessoas selecionada na lista.-->
+        <li> {{ person.full_name }} - <a href="{% url 'peopleform:update' pk=person.id %}">Editar</a>
+            - <a href="{% url 'peopleform:detail' pk=person.id %}">Detalhes</a>
+            - <a href="{% url 'peopleform:delete' pk=person.id %}">Excluir</a>
+        </li>
+        <br>
+        {% endfor %}
+        <br>
+    </div>
+    <input type="submit" value="Novo Cadastro" onclick="location.href = '{% url 'peopleform:create' %}'">
+</section>
+
+</body>
+</html>

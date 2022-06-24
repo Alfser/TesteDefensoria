@@ -1,0 +1,46 @@
+body{
+    background: rgb(60, 60, 177);
+    font: normal 15pt Arial;
+    align-items: center;
+     
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 700px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: auto;
+    justify-items: center;
+    box-shadow: 4px 4px 10px rgb(20, 20, 20);
+}
+
+div{
+    background: white;
+    padding: 15px;
+    width: 80%;
+    height: 80%;
+    font-family: 'Times New Roman', Times, serif;
+    border: 2px solid black;
+    margin: 20px;    
+}
+
+input{
+    border-radius: 10px;
+    background: white;
+    padding: 15px;
+    width: 20%;
+    align-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    border: 3px solid black;
+    box-shadow: 1px 1px 3px rgb(20, 20, 20);
+    margin: 20px;
+}
